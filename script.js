@@ -8,9 +8,15 @@
 /* ---------- 1. FORMULAIRE -> WHATSAPP ---------- */
 const ENDPOINT_DEVIS = "https://superagent-d1588461.base44.app/functions/submitDevis";
 const form = document.getElementById("devisForm");
+window.__formLoad = Date.now();
 if (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    // Anti-spam : champ piège invisible + formulaire rempli trop vite = robot
+    const piege = document.getElementById("site-web-hp");
+    if (piege && piege.value !== "") return;
+    if (Date.now() - (window.__formLoad || 0) < 2500) return;
+
     const nom = document.getElementById("nom").value.trim();
     const tel = document.getElementById("telephone").value.trim();
     const service = document.getElementById("service").value;

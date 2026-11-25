@@ -28,6 +28,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <script src="../pwa.js" defer></script>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 <body>
 
@@ -48,7 +49,7 @@
 
   <section class="hero">
     <div class="container">
-      <img class="hero-logo" src="../assets/logo-256.png" alt="Komara Agency logo" width="124" height="124">
+      <img class="hero-logo" src="../assets/logo-256.png" alt="Komara Agency logo" width="124" height="124" loading="lazy" decoding="async">
       <p class="badge">Free quote in 2 minutes 🇬🇳</p>
       <h2>We digitalise your business</h2>
       <p class="hero-txt">WhatsApp and Telegram bots, websites that sell, logos and visuals that stand out. Your business sells 24/7, even while you sleep 😴</p>
@@ -152,17 +153,18 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer-logo-img"><img src="../assets/logo-128.png" alt="Komara Agency" width="56" height="56"></p>
+      <p class="footer-logo-img"><img src="../assets/logo-128.png" alt="Komara Agency" width="56" height="56" loading="lazy" decoding="async"></p>
       <p class="footer-logo">Komara <span>Agency</span> 🇬🇳</p>
       <p class="footer-liens">
-        <a href="https://komaraagency.github.io/komara-bot-terms/" target="_blank" rel="noopener">Terms of Service (FR)</a>
-        <a href="https://komaraagency.github.io/komara-bot-terms/confidentialite.html" target="_blank" rel="noopener">Privacy Policy (FR)</a>
-        <a href="https://komaraagency.github.io/komara-bot-terms/suppression-donnees.html" target="_blank" rel="noopener">Data Deletion (FR)</a>
+        <a href="../cgu.html" target="_blank" rel="noopener">Terms of Service (FR)</a>
+        <a href="../confidentialite.html" target="_blank" rel="noopener">Privacy Policy (FR)</a>
+        <a href="../confidentialite.html#droits" target="_blank" rel="noopener">Data Deletion (FR)</a>
       </p>
       <p class="footer-contact"><a href="https://wa.me/212701986219" target="_blank" rel="noopener">+212 701 986 219</a> · <a href="mailto:ndinekomara2442@gmail.com">ndinekomara2442@gmail.com</a></p>
       <p class="footer-copy">© 2026 Komara Agency 🇬🇳. All rights reserved. · Casablanca, Morocco</p>
     </div>
   </footer>
 
+  <script src="../cookies.js" defer></script>
 </body>
 </html>

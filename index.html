@@ -44,6 +44,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <script src="./pwa.js" defer></script>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 <body>
 
@@ -67,7 +68,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <img class="hero-logo" src="assets/logo-256.png" alt="Logo Komara Agency 🇬🇳" width="124" height="124">
+      <img class="hero-logo" src="assets/logo-256.png" alt="Logo Komara Agency 🇬🇳" width="124" height="124" loading="lazy" decoding="async">
       <p class="badge">Devis gratuit en 2 minutes 🇬🇳</p>
       <h2>On digitalise ton business</h2>
       <p class="hero-txt">Bots WhatsApp et Telegram, sites web qui vendent, logos et visuels qui marquent. Ton business vend 24h/24, même quand tu dors 😴</p>
@@ -276,6 +277,7 @@
       <h2>Demander un devis gratuit</h2>
       <p class="section-sub">Réponse en 2 minutes sur WhatsApp</p>
       <form id="devisForm" class="form-devis">
+      <div class="hp-field" aria-hidden="true"><label for="site-web-hp">Laisse ce champ vide</label><input type="text" id="site-web-hp" name="site_web_hp" tabindex="-1" autocomplete="off" data-honeypot></div>
         <input type="text" id="nom" placeholder="Ton nom" required>
         <input type="tel" id="telephone" placeholder="Ton numéro WhatsApp" required>
         <select id="service" required>
@@ -308,12 +310,12 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p class="footer-logo-img"><img src="assets/logo-128.png" alt="Komara Agency" width="56" height="56"></p>
+      <p class="footer-logo-img"><img src="assets/logo-128.png" alt="Komara Agency" width="56" height="56" loading="lazy" decoding="async"></p>
       <p class="footer-logo">Komara <span>Agency</span> 🇬🇳</p>
       <p class="footer-liens">
-        <a href="https://komaraagency.github.io/komara-bot-terms/" target="_blank" rel="noopener">Conditions de Service</a>
-        <a href="https://komaraagency.github.io/komara-bot-terms/confidentialite.html" target="_blank" rel="noopener">Politique de Confidentialité</a>
-        <a href="https://komaraagency.github.io/komara-bot-terms/suppression-donnees.html" target="_blank" rel="noopener">Suppression des données</a>
+        <a href="cgu.html" target="_blank" rel="noopener">Conditions de Service</a>
+        <a href="confidentialite.html" target="_blank" rel="noopener">Politique de Confidentialité</a>
+        <a href="confidentialite.html#droits" target="_blank" rel="noopener">Suppression des données</a>
         <a href="app.html">Version application</a>
       </p>
       <p class="footer-contact">
@@ -325,5 +327,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="cookies.js" defer></script>
 </body>
 </html>

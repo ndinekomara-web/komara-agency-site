@@ -169,6 +169,7 @@
 
   /* ---------------- Devis ---------------- */
   var form = document.getElementById("form-devis");
+  window.__formLoad = Date.now();
   var btnEnvoyer = document.getElementById("btn-envoyer");
   var recap = document.getElementById("recap");
   var dernierDevis = null;
@@ -176,6 +177,11 @@
   if (form) {
     form.addEventListener("submit", async function (evenement) {
       evenement.preventDefault();
+
+      // Anti-spam : champ piège + remplissage instantané
+      var piege = document.getElementById("site-web-hp");
+      if (piege && piege.value !== "") return;
+      if (Date.now() - (window.__formLoad || 0) < 2500) return;
 
       var nom = (document.getElementById("nom").value || "").trim();
       var tel = (document.getElementById("telephone").value || "").trim();
