@@ -8,7 +8,7 @@
 
   var CONFIG = {
     ga4: "",                 // ex. "G-XXXXXXXXXX"  (analytics.google.com)
-    plausible: "",           // ex. "komaraagency.github.io" (plausible.io)
+    plausible: "",           // ex. "ndinekomara-web.github.io" (plausible.io)
     endpoint: ""             // ex. "https://mon-compteur/track" (auto-hébergé)
   };
 

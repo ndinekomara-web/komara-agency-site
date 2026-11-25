@@ -3,4 +3,4 @@ Allow: /
 Disallow: /offline.html
 
 # Pages légales et principales
-Sitemap: https://komaraagency.github.io/komara-agency-site/sitemap.xml
+Sitemap: https://ndinekomara-web.github.io/komara-agency-site/sitemap.xml
